@@ -211,10 +211,6 @@ oie.kick();
   .catch(console.error);
   }
 
-  if (message.content === '!waifu MaVi-sama') {
-     message.channel.send('MaVi............Existem tantas coisas que quero lher dizer mas... ainda... não sei se devo tentar... \r Mas Sério, como descobriu essa porra?');
-  }
-
   if (message.content === 'a!jakka jan') {
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
