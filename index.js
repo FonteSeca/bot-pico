@@ -536,10 +536,6 @@ oie.kick();
         name: "!tasukete @user",
         value: "Atira no coleguinha"
       },
-      {
-        name: "RABBITÃO",
-        value: "[Rabbit - iFonteSeca](https://www.rabb.it/ifonteseca) \r[Rabbit - MaVi](https://www.rabb.it/MaVi) "
-      },
     ],
     timestamp: new Date(),
     footer: {
