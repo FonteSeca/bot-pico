@@ -146,7 +146,7 @@ oie.kick();
    }
    if (!mention) return message.channel.send(':icecream: ' + message.author.toString() + ' não sabe usar o comando, e derramou sorvetinho em sí mesmo. **(Use !sorvetinho @user)**'); // Essa é uma mensagem de erro.
    if (mention == message.author) return message.channel.send(':icecream: ' + Bot.user + ' derramou sorvetinho em sí mesmo.'); // Quando a pessoa joga sorvetinho em sí mesmo.
-   
+
 
   }
 
@@ -596,7 +596,7 @@ Bot.on('guildBanAdd', user => {
 
 Bot.on('guildMemberAdd', member => {
   // Send the message to the guilds default channel (usually #general), mentioning the member
-  member.guild.defaultChannel.send(`Bem-vindo ao Porão da MaVi-sama. <3, ${member}!`);
+  member.guild.defaultChannel.send(`Bem-vindo . <3, ${member}!`);
   member.guild.defaultChannel.sendFile(`http://i.imgur.com/EY9tpdc.gif`);
 
   // If you want to send the message to a designated channel on a server instead
@@ -605,7 +605,7 @@ Bot.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Bem-vindo ao Porão da MaVi-sama. <3, ${member}`);
+  channel.send(`Bem-vindo . <3, ${member}`);
   channel.send(`http://i.imgur.com/EY9tpdc.gif`);
 });
 
