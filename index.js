@@ -189,7 +189,7 @@ oie.kick();
   }
 
   if ((/desu/).test(message.content)) {
-    console.log(${msg.author} + ': ' + message.content);
+    console.log(message.author + ': ' + message.content);
     //message.delete(20)
     //.then(msg => console.log(`Deleted message from ${msg.author}`))
     //.catch(console.error);
