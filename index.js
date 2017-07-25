@@ -163,7 +163,7 @@ oie.kick();
     .catch(console.error);
   }
 
-  if ((/!alegria/).test(message.content)) {
+  if ((/!ale/).test(message.content)) {
     const mention = message.mentions.users.first();
     message.channel.send(mention.toString() + ' entrou na dança do trenzinho da alegria', {file: "http://static1.fjcdn.com/thumbnails/comments/There+are+no+regrets+in+the+pico+train+_b3152066afcf56723758cf921a6720ca.png"}); // Mensagem normal
     message.delete()
