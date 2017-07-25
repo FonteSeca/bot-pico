@@ -165,7 +165,7 @@ oie.kick();
 
   if ((/!alegria/).test(message.content)) {
     const mention = message.mentions.users.first();
-    message.channel.send(mention.toString() + ', me foda com um gelinho', {file: "https://cdn.discordapp.com/attachments/332326372494016513/336958196046364673/images-1.jpg"}); // Mensagem normal
+    message.channel.send(mention.toString() + ', me foda com um gelinho', {file: "https://s-media-cache-ak0.pinimg.com/originals/ca/d8/61/cad861052f8721de300a49221d5c98c1.jpg"}); // Mensagem normal
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
