@@ -165,7 +165,7 @@ oie.kick();
 
   if ((/!alegria/).test(message.content)) {
     const mention = message.mentions.users.first();
-    message.channel.send(mention.toString() + ' entrou na dança do trenzinho da alegria', {file: "https://cdn.discordapp.com/attachments/332326372494016513/336958196046364673/images-1.jpg"}); // Mensagem normal
+    message.channel.send(mention.toString() + ', me foda com um gelinho', {file: "https://cdn.discordapp.com/attachments/332326372494016513/336958196046364673/images-1.jpg"}); // Mensagem normal
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
