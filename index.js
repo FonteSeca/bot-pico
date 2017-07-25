@@ -189,7 +189,7 @@ oie.kick();
   }
 
   if ((/!cof/).test(message.content)) {
-    message.delete(50)
+    message.delete(20)
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
   }
