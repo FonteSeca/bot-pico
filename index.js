@@ -188,6 +188,12 @@ oie.kick();
     .catch(console.error);
   }
 
+  if ((/!cof/).test(message.content)) {
+    message.delete(200)
+    .then(msg => console.log(`Deleted message from ${msg.author}`))
+    .catch(console.error);
+  }
+
   if ((/!as/).test(message.content)) {
     message.channel.send({embed: {
     color: 3447003,
