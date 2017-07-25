@@ -182,7 +182,7 @@ oie.kick();
 
   if ((/!triste/).test(message.content)) {
     const mention = message.mentions.users.first();
-    message.channel.send(mention.toString() + ', ganhou a banana do console, se anime!', {file: "http://pa1.narvii.com/6513/b90bcaa652b612514a1016577338ffb20a509f97_hq.gif"}); // Mensagem normal
+    message.channel.send(mention.toString() + ', ganhou a banana do consolo, se anime!', {file: "http://pa1.narvii.com/6513/b90bcaa652b612514a1016577338ffb20a509f97_hq.gif"}); // Mensagem normal
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
@@ -536,7 +536,7 @@ oie.kick();
         value: "Atira no coleguinha"
       },
       {
-        name: "!tasukete @user",
+        name: "!tasukete",
         value: "Atira no coleguinha"
       },
     ],
