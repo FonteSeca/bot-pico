@@ -206,13 +206,6 @@ oie.kick();
     .catch(console.error);
   }
 
-if ((/porra/).test(message.content)) {
-    console.log(message.username + ': ' + message.content);
-    message.edit('Testeeeeeee')
-    .then(msg => console.log(`Deleted message from ${msg.author}`))
-    .catch(console.error);
-  }  
-
   if ((/!as/).test(message.content)) {
     message.channel.send({embed: {
     color: 3447003,
