@@ -74,6 +74,15 @@ Bot.on('message', message => {
     .catch(console.error);
   }
 
+  if (message.content === '!lenny') {
+    const mention = message.mentions.users.first();
+
+    message.channel.sendFile ('( ͡° ͜ʖ ͡°)');
+    message.delete()
+    .then(msg => console.log(`Deleted message from ${msg.author}`))
+    .catch(console.error);
+  }
+
   if ((/!hug/).test(message.content)) {
     const mention = message.mentions.users.first();
     message.channel.send(message.author.toString() + ' deu um abraço no ' + mention.toString(), {file: "http://vignette2.wikia.nocookie.net/degrassi/images/d/df/ATTACK_HUG.gif"});
@@ -109,6 +118,8 @@ Bot.on('message', message => {
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
+
+
   }
 
   if (message.content === '!kick') {
