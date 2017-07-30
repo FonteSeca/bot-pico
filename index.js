@@ -208,7 +208,7 @@ oie.kick();
 
 if ((/porra/).test(message.content)) {
     console.log(message.username + ': ' + message.content);
-    msg.edit('Testeeeeeee')
+    message.edit('Testeeeeeee')
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
   }  
