@@ -176,7 +176,7 @@ oie.kick();
 
   if ((/!lolicon/).test(message.content)) {
     const mention = message.mentions.users.first();
-    message.channel.send(' Você está preso-desu, ' + mention.toString(), {file: "http://www.yfonteseca.esy.es/BotPico/Memes/preso-desu.jpg"}); // Mensagem normal
+    message.channel.send(' Você está preso-des, ' + mention.toString(), {file: "http://www.yfonteseca.esy.es/BotPico/Memes/preso-desu.jpg"}); // Mensagem normal
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
