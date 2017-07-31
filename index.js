@@ -166,7 +166,7 @@ oie.kick();
     message.channel.send(' ', {file: "https://cdn.discordapp.com/attachments/317406347165433856/336352974353727488/dba.gif"});
   }
 
-  if (message.content === '!só') {
+  if ((/!só/).test(message.content)) {
     const mention = message.mentions.users.first();
     message.channel.send('Pico e chico chamaram ' + mention.toString() + ' para brincar de faz de conta', {file: "https://cdn.discordapp.com/attachments/317406347165433856/336352974353727488/dba.gif"});
     message.delete()
