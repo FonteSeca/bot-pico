@@ -166,6 +166,14 @@ oie.kick();
     message.channel.send(' ', {file: "https://cdn.discordapp.com/attachments/317406347165433856/336352974353727488/dba.gif"});
   }
 
+  if (message.content === '!só') {
+    const mention = message.mentions.users.first();
+    message.channel.send('Pico e chico chamaram ' + mention.toString() + ' para brincar de faz de conta', {file: "https://cdn.discordapp.com/attachments/317406347165433856/336352974353727488/dba.gif"});
+    message.delete()
+    .then(msg => console.log(`Deleted message from ${msg.author}`))
+    .catch(console.error);
+  }
+
   if ((/!lolicon/).test(message.content)) {
     const mention = message.mentions.users.first();
     message.channel.send(' Você está preso-desu, ' + mention.toString(), {file: "http://www.yfonteseca.esy.es/BotPico/Memes/preso-desu.jpg"}); // Mensagem normal
