@@ -168,7 +168,7 @@ oie.kick();
 
   if ((/!só/).test(message.content)) {
     const mention = message.mentions.users.first();
-    message.channel.send('Pico e chico chamaram ' + mention.toString() + ' para brincar de faz de conta', {file: "https://cdn.discordapp.com/attachments/317406347165433856/336352974353727488/dba.gif"});
+    message.channel.send('Pico e chico chamaram ' + mention.toString() + ' para brincar de faz de conta', {file: "http://thumbnail.egloos.net/600x0/http://pds4.egloos.com/pds/200704/20/02/e0013702_02045451.jpg"});
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
