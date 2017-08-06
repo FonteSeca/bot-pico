@@ -214,7 +214,7 @@ oie.kick();
 
   if ((/kyaaa/).test(message.content)) {
     console.log(message.author.toString() + ': ' + message.content);
-    console.log(message.user);
+    console.log(message.users);
     message.delete(500)
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
