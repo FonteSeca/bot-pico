@@ -182,12 +182,9 @@ oie.kick();
     .catch(console.error);
   }
 
-  if ((/pico/).test(message.content)) {
-    const mention = message.mentions.users.first();
-    message.reply('Me chamou?');
-    message.delete()
-    .then(msg => console.log(`Deleted message from ${msg.author}`))
-    .catch(console.error);
+  if ((/pico/).test(message.content) {
+
+    message.reply('me chamou?');
   }
 
   if ((/!ale/).test(message.content)) {
@@ -216,8 +213,7 @@ oie.kick();
   }
 
   if ((/kyaaa/).test(message.content)) {
-    console.log(message.author.toString() + ': ' + message.content);
-    console.log(message.username);
+    console.log(message.user.username + ': ' + message.content);
     message.delete(500)
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
