@@ -182,7 +182,7 @@ oie.kick();
     .catch(console.error);
   }
 
-  if ((/!pico/).test(message.content)) {
+  if ((/pico/).test(message.content)) {
     const mention = message.mentions.users.first();
     message.reply('Me chamou?');
     message.delete()
