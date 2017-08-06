@@ -184,7 +184,7 @@ oie.kick();
 
   if ((/!pico/).test(message.content)) {
     const mention = message.mentions.users.first();
-    message.channel.reply('Me chamou?');
+    message.reply('Me chamou?');
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
