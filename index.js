@@ -182,7 +182,7 @@ oie.kick();
     .catch(console.error);
   }
 
-  if ((/pico/).test(message.content) {
+  if ((/pico/).test(message.content)) {
 
     message.reply('me chamou?');
   }
