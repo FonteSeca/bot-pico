@@ -182,10 +182,6 @@ oie.kick();
     .catch(console.error);
   }
 
-  if ((/pico/).test(message.content)) {
-
-    message.reply('me chamou?');
-  }
 
   if ((/!ale/).test(message.content)) {
     const mention = message.mentions.users.first();
