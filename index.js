@@ -5,7 +5,7 @@ const Bot = new Discord.Client();
 
 Bot.on('ready', () => {
     console.log(`[Start] ${new Date()}`);
-    Bot.user.setGame('Tremzinho da Alegria Simulator');
+    Bot.user.setPresence({ game: { name: 'Tremzinho da Alegria Simulator', type: 0 } });
 });
 
 
