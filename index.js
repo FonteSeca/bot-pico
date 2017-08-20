@@ -191,9 +191,17 @@ oie.kick();
     .catch(console.error);
   }
 
-    if ((/!kiss/).test(message.content)) {
+  if ((/!kiss/).test(message.content)) {
+    const mention = message.mentions.users.first();
+    message.channel.send(mention.toString() + ' entrou na dança do trenzinho da alegria', {file: "http://static1.fjcdn.com/thumbnails/comments/There+are+no+regrets+in+the+pico+train+_b3152066afcf56723758cf921a6720ca.png"}); // Mensagem normal
+    message.delete()
+    .then(msg => console.log(`Deleted message from ${msg.author}`))
+    .catch(console.error);
+  }
+
+  if ((/!skiss/).test(message.content)) {
     const mention = msg.mentions.users.first();
-    message.channel.send(message.author.toString() + 'deu um beijo no ' + mention.toString()); // Mensagem normal
+    message.channel.send(message.author.toString() + ' deu um beijo no ' + mention.toString()); // Mensagem normal
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
