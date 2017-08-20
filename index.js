@@ -103,6 +103,9 @@ Bot.on('message', message => {
   if ((/!kiss/).test(message.content)) {
     const mention = message.mentions.users.first();
     message.channel.sendMessage(message.author.toString() + ' Beijou ' + mention.toString());
+    message.delete()
+    .then(msg => console.log(`Deleted message from ${msg.author}`))
+    .catch(console.error);
   }
 
   if (message.content === '!donate') {
