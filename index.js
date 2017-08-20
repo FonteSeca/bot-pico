@@ -102,7 +102,7 @@ Bot.on('message', message => {
 
   if ((/!kiss/).test(message.content)) {
     const mention = message.mentions.users.first();
-    message.channel.sendMessage('Teste');
+    message.channel.sendMessage(message.author.toString() + ' Beijou ' + mention.toString());
   }
 
   if (message.content === '!donate') {
