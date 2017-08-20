@@ -191,6 +191,14 @@ oie.kick();
     .catch(console.error);
   }
 
+    if ((/!kiss/).test(message.content)) {
+    const mention = msg.mentions.users.first();
+    message.channel.send(message.author.toString() + 'deu um beijo no ' + mention.toString()); // Mensagem normal
+    message.delete()
+    .then(msg => console.log(`Deleted message from ${msg.author}`))
+    .catch(console.error);
+  }
+
   if ((/!gelinho/).test(message.content)) {
     const mention = message.mentions.users.first();
     if (mention == message.author) return message.channel.send(Bot.user + ' enfiou o gelinho em si mesmo. kyaa'); // Quando a pessoa joga sorvetinho em sí mesmo.
