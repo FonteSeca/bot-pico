@@ -102,7 +102,7 @@ Bot.on('message', message => {
 
   if ((/!kiss/).test(message.content)) {
     const mention = message.mentions.users.first();
-    message.channel.sendMessage(message.author.toString() + ' Beijou ' + mention.toString());
+    message.channel.send(message.author.toString() + ' Beijou ' + mention.toString(), {file: "https://cdn.discordapp.com/attachments/302911279608233986/349348227390111754/giphy.gif"});
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
