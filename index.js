@@ -28,8 +28,6 @@ Bot.on('message', message => {
 switch (command) {
       case 'say':
       return say(msg, suffix);
-          default:
-      msg.channel.send(basicembed('5351170', 'Comando errado ' + msg.author + ' b-baka...'));
     }
   }
   if (message.content === '!hey') {
