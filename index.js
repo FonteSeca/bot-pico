@@ -15,7 +15,7 @@ Bot.on('message', message => {
 
 
 
-  let prefix = "!";
+  let PREFIX = "!";
 
     const message = msg.content.trim();
 
