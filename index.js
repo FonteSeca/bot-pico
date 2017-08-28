@@ -12,7 +12,26 @@ Bot.on('ready', () => {
 music(Bot);
 
 Bot.on('message', message => {
+
+
+
   let prefix = "!";
+
+    const message = msg.content.trim();
+
+    // Verifica se a mensagem é um comando
+    if (message.toLowerCase().startsWith(PREFIX.toLowerCase())) {
+      // Get the command and suffix.
+      const command = message.substring(PREFIX.length).split(/[ \n]/)[0].toLowerCase().trim();
+      const suffix = message.substring(PREFIX.length + command.length).trim();
+
+switch (command) {
+      case 'say':
+      return say(msg, suffix);
+          default:
+      msg.channel.send(basicembed('5351170', 'Comando errado ' + msg.author + ' b-baka...'));
+    }
+  }
   if (message.content === '!hey') {
     message.reply('hey!');
   }
@@ -647,6 +666,10 @@ Bot.on('guildMemberAdd', member => {
 });
 
 
-
+  function say(msg, suffix) {
+    msg.delete();
+    msg.channel.sendMessage(suffix);
+    
+  }
 
 Bot.login(process.env.token);
