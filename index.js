@@ -17,7 +17,7 @@ Bot.on('message', message => {
 
   let PREFIX = "!";
 
-    const message = msg.content.trim();
+    const message = message.content.trim();
 
     // Verifica se a mensagem é um comando
     if (message.toLowerCase().startsWith(PREFIX.toLowerCase())) {
@@ -27,7 +27,7 @@ Bot.on('message', message => {
 
 switch (command) {
       case 'say':
-      return say(msg, suffix);
+      return say(message, suffix);
     }
   }
   if (message.content === '!hey') {
