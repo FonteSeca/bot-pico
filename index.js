@@ -15,21 +15,10 @@ Bot.on('message', message => {
 
 
 
-  let PREFIX = "!";
+  let prefix = "!";
 
-    const message = message.content.trim();
 
-    // Verifica se a mensagem é um comando
-    if (message.toLowerCase().startsWith(PREFIX.toLowerCase())) {
-      // Get the command and suffix.
-      const command = message.substring(PREFIX.length).split(/[ \n]/)[0].toLowerCase().trim();
-      const suffix = message.substring(PREFIX.length + command.length).trim();
-
-switch (command) {
-      case 'say':
-      return say(message, suffix);
-    }
-  }
+  
   if (message.content === '!hey') {
     message.reply('hey!');
   }
@@ -664,10 +653,6 @@ Bot.on('guildMemberAdd', member => {
 });
 
 
-  function say(message, suffix) {
-    message.delete();
-    message.channel.sendMessage(suffix);
-    
-  }
+
 
 Bot.login(process.env.token);
