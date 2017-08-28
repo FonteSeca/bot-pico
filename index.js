@@ -664,9 +664,9 @@ Bot.on('guildMemberAdd', member => {
 });
 
 
-  function say(msg, suffix) {
-    msg.delete();
-    msg.channel.sendMessage(suffix);
+  function say(message, suffix) {
+    message.delete();
+    message.channel.sendMessage(suffix);
     
   }
 
