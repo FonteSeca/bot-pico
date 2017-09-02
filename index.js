@@ -114,6 +114,30 @@ Bot.on('message', message => {
     .catch(console.error);
   }
 
+  if ((/!correr/).test(message.content)) {
+    const mention = message.mentions.users.first();
+    message.channel.send(message.author.toString() + ' está correndo!', {file: "https://cdn.discordapp.com/attachments/352954097978310666/353685459798589442/1460140096-e75b38844a685a142f6a85da93ad9f2d.gif"});
+    message.delete()
+    .then(msg => console.log(`Deleted message from ${msg.author}`))
+    .catch(console.error);
+  }
+
+  if ((/!sono/).test(message.content)) {
+    const mention = message.mentions.users.first();
+    message.channel.send(message.author.toString() + ' está com sono...!', {file: "https://cdn.discordapp.com/attachments/352954097978310666/353685385089515520/Sono.gif"});
+    message.delete()
+    .then(msg => console.log(`Deleted message from ${msg.author}`))
+    .catch(console.error);
+  }
+
+  if ((/!dormir/).test(message.content)) {
+    const mention = message.mentions.users.first();
+    message.channel.send(message.author.toString() + ' está dormindo...', {file: "https://cdn.discordapp.com/attachments/352954097978310666/353685798044041217/tumblr_inline_n97cqioJX61r023wy.gif"});
+    message.delete()
+    .then(msg => console.log(`Deleted message from ${msg.author}`))
+    .catch(console.error);
+  }
+
   if (message.content === '!donate') {
     message.channel.sendMessage('@Everyone');
     message.delete()
