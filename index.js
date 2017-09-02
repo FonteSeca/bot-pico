@@ -604,8 +604,16 @@ oie.kick();
         value: "Atira no coleguinha"
       },
       {
-        name: "!tasukete",
-        value: "Atira no coleguinha"
+        name: "!sono",
+        value: "@user está com sono"
+      },
+      {
+        name: "!correr",
+        value: "@user está correndo"
+      },
+      {
+        name: "!dormir",
+        value: "@user está dormindo"
       },
     ],
     timestamp: new Date(),
