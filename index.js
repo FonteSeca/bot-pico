@@ -18,7 +18,7 @@ Bot.on('message', message => {
   let prefix = "!";
 
 
-  
+
   if (message.content === '!hey') {
     message.reply('hey!');
   }
@@ -250,7 +250,7 @@ oie.kick();
   if ((/kyaaa/).test(message.content)) {
     console.log(message.author.toString() + ': ' + message.content);
     console.log(message.users);
-    message.delete(20)
+    message.delete(10)
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
   }
