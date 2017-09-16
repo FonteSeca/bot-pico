@@ -239,6 +239,15 @@ oie.kick();
     .catch(console.error);
   }
 
+  if ((/!luar/).test(message.content)) {
+    const mention = message.mentions.users.first();
+    if (mention == message.author) return message.channel.send(Bot.user + ' enfiou o gelinho em si mesmo. kyaa'); // Quando a pessoa joga sorvetinho em sí mesmo.
+    message.channel.send(message.author.toString() + ', convidou ' + mention.toString() +' para a gozada lunática', {file: "https://cdn.discordapp.com/attachments/302911279608233986/358439411798638592/I_5dd976ad9e94cfc9f63f249955a697bb.gif"}); // Mensagem normal
+    message.delete()
+    .then(msg => console.log(`Deleted message from ${msg.author}`))
+    .catch(console.error);
+  }
+
   if ((/!triste/).test(message.content)) {
     const mention = message.mentions.users.first();
     message.channel.send(mention.toString() + ', ganhou a banana do consolo, se anime!', {file: "http://pa1.narvii.com/6513/b90bcaa652b612514a1016577338ffb20a509f97_hq.gif"}); // Mensagem normal
