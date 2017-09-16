@@ -241,7 +241,7 @@ oie.kick();
 
   if ((/!luar/).test(message.content)) {
     const mention = message.mentions.users.first();
-    message.channel.send(message.author.toString() + ', convidou ' + mention.toString() +' para a gozada lunática', {file: "https://cdn.discordapp.com/attachments/302911279608233986/358439411798638592/I_5dd976ad9e94cfc9f63f249955a697bb.gif"}); // Mensagem normal
+    message.channel.send(bot.user.toString() + ', convidou ' + mention.toString() +' para a gozada lunática', {file: "https://cdn.discordapp.com/attachments/302911279608233986/358439411798638592/I_5dd976ad9e94cfc9f63f249955a697bb.gif"}); // Mensagem normal
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
