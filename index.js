@@ -233,7 +233,7 @@ oie.kick();
   if ((/!gelinho/).test(message.content)) {
     const mention = message.mentions.users.first();
     if (mention == message.author) return message.channel.send(Bot.user + ' enfiou o gelinho em si mesmo. kyaa'); // Quando a pessoa joga sorvetinho em sí mesmo.
-    message.channel.send(mention.toString() + ', me foda com um gelinho', {file: "https://s-media-cache-ak0.pinimg.com/originals/ca/d8/61/cad861052f8721de300a49221d5c98c1.jpg"}); // Mensagem normal
+    message.channel.send(mention.toString() + ', me foda com um gelinho', {file: "https://i.pinimg.com/originals/ca/d8/61/cad861052f8721de300a49221d5c98c1.jpg"}); // Mensagem normal
     message.delete()
     .then(msg => console.log(`Deleted message from ${msg.author}`))
     .catch(console.error);
