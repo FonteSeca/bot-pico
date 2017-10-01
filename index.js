@@ -688,8 +688,8 @@ Bot.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Bem-vindo . <3, ${member}`);
-  channel.send(`http://i.imgur.com/EY9tpdc.gif`);
+  channel.send(`${member} foi batizado por **Pico-sama**, agora você faz parte deste recinto do amor. :heart:`);
+  channel.send(`https://cdn.discordapp.com/attachments/234507773516316674/364145984571310091/4496860.gif`);
 });
 
 
