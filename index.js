@@ -679,8 +679,8 @@ Bot.on('guildBanAdd', user => {
 
 Bot.on('guildMemberAdd', member => {
   // Send the message to the guilds default channel (usually #general), mentioning the member
-  member.guild.defaultChannel.send(`Bem-vindo . <3, ${member}!`);
-  member.guild.defaultChannel.sendFile(`http://i.imgur.com/EY9tpdc.gif`);
+  member.guild.defaultChannel.send(`${member} foi batizado por **Pico-sama**, agora você faz parte deste recinto do amor. :heart:`);
+  member.guild.defaultChannel.sendFile(`https://cdn.discordapp.com/attachments/234507773516316674/364145984571310091/4496860.gif`);
 
   // If you want to send the message to a designated channel on a server instead
   // you can do the following:
