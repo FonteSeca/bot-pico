@@ -187,12 +187,7 @@ oie.kick();
 
   if ((/!novatu/).test(message.content)) {
     if (message.mentions.users.size > 0)
-
-      let roleMod = message.guild.roles.find("name", "Moderador");
-      let roleEst = message.guild.roles.find("name", "Estagiário");
-      let roleSei = message.guild.roles.find("name", "☕Seitokai");
-      
-      if(message.member.roles.has(roleMod) || message.member.roles.has(roleEst) || message.member.roles.has(roleSei)){
+      if(message.member.roles.find("name", "Moderador") || message.member.roles.find("name", "Estagiário") || message.member.roles.find("name", "☕Seitokai")) {
         const mention = message.mentions.users.first();
         message.member.addRole(kouhaiRule);
         message.channel.send(message.mention.users.first().toString() + ' Ganhou cargo com sucesso.');
