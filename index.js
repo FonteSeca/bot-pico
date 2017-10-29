@@ -188,7 +188,7 @@ oie.kick();
   if ((/!novatu/).test(message.content)) {
 
     if (message.mentions.users.size > 0) {
-      if(message.member.roles.find("name", "Moderador") || message.member.roles.find("name", "Estagiário") || message.member.roles.find("name", "☕Seitokai")) {
+      if(message.member.roles.find("name", "Moderador")) {
         const member = message.guild.member(message.mentions.users.first());
         const kouhaiRule = message.guild.roles.get("374234159696183307");
         member.addRole(member.guild.roles.find("name", "Estagiário"));
