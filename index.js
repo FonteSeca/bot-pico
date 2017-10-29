@@ -186,15 +186,13 @@ oie.kick();
 
 
   if ((/!novatu/).test(message.content)) {
-    if (message.mentions.users.size > 0)
+    if (message.mentions.users.size > 0) {
       if(message.member.roles.find("name", "Moderador") || message.member.roles.find("name", "Estagiário") || message.member.roles.find("name", "☕Seitokai")) {
         const mention = message.mentions.users.first();
         mention.member.addRole(kouhaiRule);
         message.channel.send(message.mention.users.first().toString() + ' Ganhou cargo com sucesso.');
       }
-      
-    }  
-    else if (message.mentions.users.size < 0) {
+    } else if (message.mentions.users.size < 0) {
       message.channel.send('Use **!novatu** *@user* para adicionar ao cargo');
     }  
   }
