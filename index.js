@@ -191,7 +191,7 @@ oie.kick();
       if(message.member.roles.find("name", "Moderador") || message.member.roles.find("name", "Estagiário") || message.member.roles.find("name", "☕Seitokai")) {
         const member = message.guild.member(message.mentions.users.first());
         const kouhaiRule = message.guild.roles.get("374234159696183307");
-        member.addRole(kouhaiRule);
+        member.addRole("Estagiário");
         console.log('Cargo adicionado!')
       }
     } else if (message.mentions.users.size < 0) {
