@@ -189,7 +189,7 @@ oie.kick();
     if (message.mentions.users.size > 0)
       if(message.member.roles.find("name", "Moderador") || message.member.roles.find("name", "Estagiário") || message.member.roles.find("name", "☕Seitokai")) {
         const mention = message.mentions.users.first();
-        message.member.addRole(kouhaiRule);
+        mention.member.addRole(kouhaiRule);
         message.channel.send(message.mention.users.first().toString() + ' Ganhou cargo com sucesso.');
       }
       
