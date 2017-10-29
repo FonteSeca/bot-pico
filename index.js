@@ -192,7 +192,7 @@ oie.kick();
         const member = message.guild.member(message.mentions.users.first());
         const kouhaiRule = message.guild.roles.get("374234159696183307");
         member.addRole(kouhaiRule);
-        message.channel.send(message.mention.users.first().toString() + ' Ganhou cargo com sucesso.');
+        console.log('Cargo adicionado!')
       }
     } else if (message.mentions.users.size < 0) {
       message.channel.send('Use **!novatu** *@user* para adicionar ao cargo');
