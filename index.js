@@ -16,6 +16,7 @@ Bot.on('message', message => {
 
 
   let prefix = "!";
+  const kouhaiRule = msg.guild.roles.get("374234159696183307");
 
 
 
@@ -180,6 +181,27 @@ oie.kick();
       .setThumbnail(message.autor.avatarURL)
     message.channel.sendEmbed(embed);
 
+  }
+
+
+
+  if ((/!novatu/).test(message.content)) {
+    if (message.mentions.users.size > 0)
+
+      let roleMod = message.guild.roles.find("name", "Moderador");
+      let roleEst = message.guild.roles.find("name", "Estagiário");
+      let roleSei = message.guild.roles.find("name", "☕Seitokai");
+      
+      if(message.member.roles.has(roleMod) || message.member.roles.has(roleEst) || message.member.roles.has(roleSei)){
+        const mention = message.mentions.users.first();
+        message.member.addRole(kouhaiRule);
+        message.channel.send(message.mention.users.first().toString() + ' Ganhou cargo com sucesso.');
+      }
+      
+    }  
+    else if (message.mentions.users.size < 0) {
+      message.channel.send('Use **!novatu** *@user* para adicionar ao cargo');
+    }  
   }
 
   if ((/!sorvetinho/).test(message.content)) {
@@ -691,6 +713,8 @@ Bot.on('guildMemberAdd', member => {
   channel.send(`${member} foi batizado por **Pico-sama**, agora você faz parte deste recinto do amor. :heart:`);
   channel.send(`https://cdn.discordapp.com/attachments/234507773516316674/364145984571310091/4496860.gif`);
 });
+
+
 
 
 
