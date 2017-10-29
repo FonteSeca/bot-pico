@@ -190,10 +190,9 @@ oie.kick();
     if (message.mentions.users.size > 0) {
       if(message.member.roles.find("name", "Moderador") || message.member.roles.find("name", "Estagiário") || message.member.roles.find("name", "☕Seitokai")) {
         const member = message.guild.member(message.mentions.users.first());
-        message.channel.send(member.nickname);
         const kouhaiRule = message.guild.roles.get("374234159696183307");
-        member.addRole("Estagiário");
-        console.log('Cargo adicionado!')
+        member.addRole(member.guild.roles.find("name", "Estagiário"));
+        console.log('Cargo adicionado!');
       }
     } else if (message.mentions.users.size < 0) {
       message.channel.send('Use **!novatu** *@user* para adicionar ao cargo');
