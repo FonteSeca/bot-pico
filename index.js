@@ -186,11 +186,12 @@ oie.kick();
 
 
   if ((/!novatu/).test(message.content)) {
+
     if (message.mentions.users.size > 0) {
       if(message.member.roles.find("name", "Moderador") || message.member.roles.find("name", "Estagiário") || message.member.roles.find("name", "☕Seitokai")) {
+        const member = msg.guild.member(msg.mentions.users.first());
         const kouhaiRule = message.guild.roles.get("374234159696183307");
-        const mention = message.mentions.users.first();
-        mention.member.addRole(kouhaiRule);
+        member.addRole(kouhaiRule);
         message.channel.send(message.mention.users.first().toString() + ' Ganhou cargo com sucesso.');
       }
     } else if (message.mentions.users.size < 0) {
