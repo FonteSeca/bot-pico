@@ -188,15 +188,18 @@ oie.kick();
   if ((/!novatu/).test(message.content)) {
 
     if (message.mentions.users.size > 0) {
-      if(message.member.roles.find("name", "Moderador") || message.member.roles.find("name", "Estagiário") || message.member.roles.find("name", "☕Seitokai")) {
+      if(message.member.roles.find("name", "Conselho")) {
         const member = message.guild.member(message.mentions.users.first());
         const kouhaiRule = message.guild.roles.get("374234159696183307");
         member.addRole(member.guild.roles.find("name", "🍙Kouhai"));
         console.log('Cargo adicionado!');
       }
+      else {
+        message.channel.send('Você não possui permissão.')
+      }
     } else if (message.mentions.users.size < 0) {
       message.channel.send('Use **!novatu** *@user* para adicionar ao cargo');
-    }  
+    }
   }
 
   if ((/!sorvetinho/).test(message.content)) {
@@ -696,8 +699,8 @@ Bot.on('guildBanAdd', user => {
 
 Bot.on('guildMemberAdd', member => {
   // Send the message to the guilds default channel (usually #general), mentioning the member
-  member.guild.defaultChannel.send(`${member} foi batizado por **Pico-sama**, agora você faz parte deste recinto do amor. :heart:`);
-  member.guild.defaultChannel.sendFile(`https://cdn.discordapp.com/attachments/234507773516316674/364145984571310091/4496860.gif`);
+  //member.guild.defaultChannel.send(`${member} foi batizado por **Pico-sama**, agora você faz parte deste recinto do amor. :heart:`);
+  //member.guild.defaultChannel.sendFile(`https://cdn.discordapp.com/attachments/234507773516316674/364145984571310091/4496860.gif`);
 
   // If you want to send the message to a designated channel on a server instead
   // you can do the following:
@@ -705,8 +708,8 @@ Bot.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`${member} foi batizado por **Pico-sama**, agora você faz parte deste recinto do amor. :heart:`);
-  channel.send(`https://cdn.discordapp.com/attachments/234507773516316674/364145984571310091/4496860.gif`);
+  //channel.send(`${member} foi batizado por **Pico-sama**, agora você faz parte deste recinto do amor. :heart:`);
+  //channel.send(`https://cdn.discordapp.com/attachments/234507773516316674/364145984571310091/4496860.gif`);
 });
 
 
